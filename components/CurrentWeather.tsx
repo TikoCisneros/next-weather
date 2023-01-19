@@ -1,6 +1,8 @@
 import { WeatherData } from '@/models/weather';
-import { Group, Paper, Text } from '@mantine/core';
+import { Group, Text } from '@mantine/core';
 import Image from 'next/image';
+
+import Container from './Container';
 
 type CurrentWeatherProps = {
   weatherData: WeatherData;
@@ -13,7 +15,7 @@ const CurrentWeather = ({ weatherData }: CurrentWeatherProps) => {
     main: { temp },
   } = weatherData;
   return (
-    <Paper mt='xs' p='lg' withBorder>
+    <>
       <Group position='left'>
         <Text>{name} Weather</Text>
       </Group>
@@ -28,7 +30,7 @@ const CurrentWeather = ({ weatherData }: CurrentWeatherProps) => {
           Currently {temp} &deg;C
         </Text>
       </Group>
-    </Paper>
+    </>
   );
 };
 

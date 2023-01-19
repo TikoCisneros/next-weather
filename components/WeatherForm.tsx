@@ -1,9 +1,10 @@
-import { Paper, Group, Text, TextInput, Button } from '@mantine/core';
+import { Group, Text, TextInput, Button } from '@mantine/core';
 import { ChangeEvent, useState } from 'react';
+import Container from './Container';
 
 type WeatherFormProps = {
   onGetWeatherClick: (cityName: string) => void;
-}
+};
 
 const WeatherForm = ({ onGetWeatherClick }: WeatherFormProps) => {
   const [cityInput, setCityInput] = useState('');
@@ -18,7 +19,7 @@ const WeatherForm = ({ onGetWeatherClick }: WeatherFormProps) => {
   const handleGetWeatherClick = () => onGetWeatherClick(cityInput);
 
   return (
-    <Paper p='lg' withBorder>
+    <Container>
       <Group position='apart'>
         <Text size='xl' weight={600}>
           Get the Weather!
@@ -39,7 +40,7 @@ const WeatherForm = ({ onGetWeatherClick }: WeatherFormProps) => {
           Get Weather
         </Button>
       </Group>
-    </Paper>
+    </Container>
   );
 };
 
