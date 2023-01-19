@@ -5,6 +5,8 @@ import Head from 'next/head';
 import styles from '../styles/HomePage.module.css';
 
 export default function Home() {
+  const handleGetWeatherClick = (cityName: string) => console.log('Get Weather', cityName);
+
   return (
     <>
       <Head>
@@ -15,7 +17,7 @@ export default function Home() {
       </Head>
       <div className={styles['background-container']}>
         <main className={styles['main-container']}>
-          <WeatherForm />
+          <WeatherForm onGetWeatherClick={handleGetWeatherClick}/>
         </main>
       </div>
     </>
