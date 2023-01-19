@@ -1,0 +1,6 @@
+.main {
+  position: static;
+  height: 100vh;
+  background-image: url('https://littlevisuals.co/images/sunset.jpg');
+  background-size: cover;
+}
